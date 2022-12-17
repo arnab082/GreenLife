@@ -5,8 +5,9 @@
 
 ## To run this website click on this link below
 ## https://salmon-mushroom-049645e1e.2.azurestaticapps.net
-## To run this website click on this link below
-## https://salmon-mushroom-049645e1e.2.azurestaticapps.net
+
+
+
 # Green Life
 ## Languages and Services used:
 - [HTML]
