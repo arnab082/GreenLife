@@ -2,21 +2,20 @@
 <html style="font-size: 16px" lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="utf-8" />
-  <meta name="keywords" content="Useful Links, Contact, About" />
-  <meta name="description" content="" />
-  <title>Calculate</title>
-  <link rel="stylesheet" href="greenlife.css" media="screen" />
-  <link rel="stylesheet" href="Calculate.css" media="screen" />
-  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-  <script class="u-script" type="text/javascript" src="greenlife.js" defer=""></script>
-  
-  <meta name="referrer" content="origin" />
-  <link id="u-theme-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Useful Links, Contact, About" />
+    <meta name="description" content="" />
+    <title>Calculate</title>
+    <link rel="stylesheet" href="greenlife.css" media="screen" />
+    <link rel="stylesheet" href="Calculate.css" media="screen" />
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="greenlife.js" defer=""></script>
 
-  <script type="application/ld+json">
+    <meta name="referrer" content="origin" />
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+
+    <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "Organization",
@@ -24,355 +23,312 @@
             "logo": "images/logo2.png"
         }
     </script>
-  <meta name="theme-color" content="#478ac9" />
-  <meta property="og:title" content="Calculate" />
-  <meta property="og:type" content="website" />
-  </script>
-  <meta name="theme-color" content="#478ac9">
-  <meta property="og:title" content="Premium Calculator">
-  <meta property="og:type" content="website">
-  <script>
-    var em1 = 0, em2 = 0, em3 = 0, em4 = 0;
-    var em5=0;
-    function electicity() {
-      var ec, ef, na;
-      ec = document.getElementById("egcon").value;
-      ef = parseFloat(document.getElementById("efactor").value);
-      na = document.getElementById("numberap").value;
-      em1 = parseFloat(ec * ef * na);
-      document.getElementById("ecalculate1").value = em1;
-      em5=em5+em1;
-      document.getElementById("ecalculate5").value = em5;
+    <meta name="theme-color" content="#478ac9" />
+    <meta property="og:title" content="Calculate" />
+    <meta property="og:type" content="website" />
+    </script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Premium Calculator">
+    <meta property="og:type" content="website">
+    <script>
+        var em1 = 0,
+            em2 = 0,
+            em3 = 0,
+            em4 = 0;
+        var em5 = 0;
 
-    }
-    function petrol() {
-      var ec, ef, na;
-      ec = document.getElementById("egcon1").value;
-      ef = parseFloat(document.getElementById("efactor1").value);
-      na = document.getElementById("numberap1").value;
-      em2 = parseFloat(ec * ef * na);
-      document.getElementById("ecalculate2").value = em2;
-      em5=em5+em2;
-      document.getElementById("ecalculate5").value = em5;
-    }
-    function diesel() {
-      var ec, ef, na;
-      ec = document.getElementById("egcon2").value;
-      ef = parseFloat(document.getElementById("efactor2").value);
-      na = document.getElementById("numberap2").value;
-      em3 = parseFloat(ec * ef * na);
-      document.getElementById("ecalculate3").value = em3;
-      em5=em5+em3;
-      document.getElementById("ecalculate5").value = em5;
+        function electicity() {
+            var ec, ef, na;
+            ec = document.getElementById("egcon").value;
+            ef = parseFloat(document.getElementById("efactor").value);
+            na = document.getElementById("numberap").value;
+            em1 = parseFloat(ec * ef * na);
+            em1 = em1 * 365;
+            document.getElementById("ecalculate1").value = parseFloat(em1).toFixed(2);
+            em5 = em5 + em1;
+            document.getElementById("ecalculate5").value = parseFloat(em5).toFixed(2);
 
-    }
-    function lpg() {
-      var ec, ef, na;
-      ec = document.getElementById("egcon3").value;
-      ef = parseFloat(document.getElementById("efactor3").value);
-      na = document.getElementById("numberap3").value;
-      em4 = parseFloat(ec * ef * na);
-      document.getElementById("ecalculate4").value = em4;
-      em5=em5+em4;
-      document.getElementById("ecalculate5").value = em5;
-    }
-  </script>
+        }
+
+        function petrol() {
+            var ec, ef, na;
+            ec = document.getElementById("egcon1").value;
+            ef = parseFloat(document.getElementById("efactor1").value);
+            na = document.getElementById("numberap1").value;
+            em2 = parseFloat(ec * ef * na);
+            em2 = em2 * 365;
+            document.getElementById("ecalculate2").value = parseFloat(em2).toFixed(2);
+            em5 = em5 + em2;
+            document.getElementById("ecalculate5").value = parseFloat(em5).toFixed(2);
+        }
+
+        function diesel() {
+            var ec, ef, na;
+            ec = document.getElementById("egcon2").value;
+            ef = parseFloat(document.getElementById("efactor2").value);
+            na = document.getElementById("numberap2").value;
+            em3 = parseFloat(ec * ef * na);
+            em3 = em3 * 365;
+            document.getElementById("ecalculate3").value = parseFloat(em3).toFixed(2);
+            em5 = em5 + em3;
+            document.getElementById("ecalculate5").value = parseFloat(em5).toFixed(2);
+
+        }
+
+        function lpg() {
+            var ec, ef, na;
+            ec = document.getElementById("egcon3").value;
+            ef = parseFloat(document.getElementById("efactor3").value);
+            na = document.getElementById("numberap3").value;
+            em4 = parseFloat(ec * ef * na);
+            em4 = em4 * 365;
+            document.getElementById("ecalculate4").value = parseFloat(em4).toFixed(2);
+            em5 = em5 + em4;
+            document.getElementById("ecalculate5").value = parseFloat(em5).toFixed(2);
+        }
+    </script>
 </head>
 
 <body class="u-body u-xl-mode" data-lang="en">
-  <header class="u-clearfix u-grey-75 u-header u-header" id="sec-0210">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <a href="#" class="u-image u-logo u-image-1" data-image-width="2000" data-image-height="1186">
-        <img src="images/logo2.png" class="u-logo-image u-logo-image-1" />
-      </a>
-      <a href="index.html"
-        class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-1"
-        target="_blank">Home</a>
-      <a href="About_Us.html"
-        class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-2"
-        target="_blank">About Us</a>
-      <a href="Calculate.html"
-        class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-3"
-        target="_blank">Calculate</a>
-      <a href="Contact_Us.html"
-        class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-4"
-        target="_blank">Contact Us</a>
-      <a href="index.html"
-        class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-5"
-        target="_blank">Chat With Us</a>
-    </div>
-  </header>
-  <section class="u-clearfix u-gradient u-section-1" id="sec-ef34">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-container-style u-custom-color-9 u-group u-radius-30 u-shape-round u-group-1">
-        <div class="u-container-layout u-container-layout-1">
-          <h2 class="u-text u-text-default u-text-1">
-            Know Your Carbon Footprint
-          </h2>
-          <div class="u-form u-form-1">
-            <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-1">
-                <label for="text-0b0b" class="u-label u-label-1">Energy Consumption</label>
-                <input type="number" id="egcon" name="text"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" placeholder="KWh"
-                  required="required" />
-              </div>
-              <div class="u-form-group u-form-group-2">
-                <label for="text-bad1" class="u-label u-label-2">Emission Factor</label>
-                <input type="text" id="efactor" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2" placeholder="0.85" />
-              </div>
-              <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-3">
-                <label for="number-9287" class="u-label u-label-3">Number of Appliances</label>
-                <div class="u-input-row">
-                  <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap" name="number"
-                    class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3" />
-                </div>
-              </div>
-              <div class="u-align-left u-form-group u-form-submit">
-                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-1">Calculate</a>
-                <input type="submit" value="submit" class="u-form-control-hidden" onclick="electicity()" />
-              </div>
-              <br>
-            </form>
-          </div>
-          <div class="u-form u-form-2">
-            <form action=""
-              class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-5">
-                <label for="text-bad1" class="u-form-control-hidden u-label u-label-4"></label>
-                <input type="text" id="ecalculate1" name="text-1" value="9"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4" />
-              </div>
-            </form>
-          </div>
-          <p class="u-text u-text-default u-text-2">
-            Emission Calculated :&nbsp;
-          </p>
-          <div class="u-form u-form-3">
-            <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-6">
-                <label for="text-0b0b" class="u-label u-label-5">Fuel Consumption</label>
-                <input type="number" id="egcon1" name="text"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-5"
-                  placeholder="Petrol (Litres)" required="required" />
-              </div>
-              <div class="u-form-group u-form-group-7">
-                <label for="text-bad1" class="u-label u-label-6">Emission Factor</label>
-                <input type="text" id="efactor1" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-6" placeholder="2.296" />
-              </div>
-              <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-8">
-                <label for="number-9287" class="u-label u-label-7">Number of Vehicles</label>
-                <div class="u-input-row">
-                  <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap1" name="number"
-                    class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7" />
-                </div>
-              </div>
-              <div class="u-align-left u-form-group u-form-submit">
-                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-2">Calculate</a>
-                <input type="submit" value="submit" class="u-form-control-hidden" onclick="petrol()" />
-              </div>
-            </form>
-          </div>
-          <div class="u-form u-form-4">
-            <form action=""
-              class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-10">
-                <label for="text-bad1" class="u-form-control-hidden u-label u-label-8"></label>
-                <input type="text" id="ecalculate2" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8" />
-              </div>
-              <div class="u-form-send-message u-form-send-success">
-                Thank you! Your message has been sent.
-              </div>
-              <div class="u-form-send-error u-form-send-message">
-                Unable to send your message. Please fix errors then try again.
-              </div>
-              <input type="hidden" value="" name="recaptchaResponse" />
-              <input type="hidden" name="formServices" value="edac30f68a28e763f6749ad09bc87b38" />
-            </form>
-          </div>
-          <p class="u-text u-text-default u-text-3">
-            Emission Calculated :&nbsp;
-          </p>
-          <div class="u-form u-form-5">
-            <form action=""
-              class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-11">
-                <label for="text-0b0b" class="u-label u-label-9">Fuel Consumption</label>
-                <input type="number" id="egcon2" name="text"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-9"
-                  placeholder="Diesel (Litres)" required="required" />
-              </div>
-              <div class="u-form-group u-form-group-12">
-                <label for="text-bad1" class="u-label u-label-10">Emission Factor</label>
-                <input type="text" id="efactor2" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-10"
-                  placeholder="2.653" />
-              </div>
-              <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-13">
-                <label for="number-9287" class="u-label u-label-11">Number of Vehicles</label>
-                <div class="u-input-row">
-                  <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap2" name="number"
-                    class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-11" />
-                </div>
-              </div>
-              <div class="u-align-left u-form-group u-form-submit">
-                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-3">Calculate</a>
-                <input type="submit" value="submit" class="u-form-control-hidden" onclick="diesel()" />
-              </div>
-            </form>
-          </div>
-          <div class="u-form u-form-6">
-            <form action=""
-              class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-15">
-                <label for="text-bad1" class="u-form-control-hidden u-label u-label-12"></label>
-                <input type="text" id="ecalculate3" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-12" />
-              </div>
-            </form>
-          </div>
-          <p class="u-text u-text-default u-text-4">
-            Emission Calculated :&nbsp;
-          </p>
-          <div class="u-form u-form-7">
-            <form action=""
-              class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-16">
-                <label for="text-0b0b" class="u-label u-label-13">Fuel Consumption</label>
-                <input type="number" id="egcon3" name="text"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-13"
-                  placeholder="LPG (Kg)" required="required" />
-              </div>
-              <div class="u-form-group u-form-group-17">
-                <label for="text-bad1" class="u-label u-label-14">Emission Factor</label>
-                <input type="text" id="efactor3" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-14"
-                  placeholder="2.983" />
-              </div>
-              <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-18">
-                <label for="number-9287" class="u-label u-label-15">Number of Cylinders</label>
-                <div class="u-input-row">
-                  <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap3"
-                    name="number" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-15" />
-                </div>
-              </div>
-              <div class="u-align-left u-form-group u-form-submit">
-                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-4">Calculate</a>
-                <input type="submit" value="submit" class="u-form-control-hidden" onclick="lpg()" />
-              </div>
-            </form>
-          </div>
-          <div class="u-form u-form-8">
-            <form action=""
-              class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-              style="padding: 10px">
-              <div class="u-form-group u-form-group-20">
-                <label for="text-bad1" class="u-form-control-hidden u-label u-label-16"></label>
-                <input type="text" id="ecalculate4" name="text-1"
-                  class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-16" />
-              </div>
-            </form>
-          </div>
-          <p class="u-text u-text-default u-text-5">
-            Emission Calculated :&nbsp;
-          </p>
-          <div class="u-container-style u-custom-color-8 u-group u-radius-30 u-shape-round u-group-2">
-            <div class="u-container-layout u-container-layout-2">
-              <h2 class="u-text u-text-default u-text-6">
-                Total Emission (in a year) :&nbsp;
-              </h2>
-              <div class="u-form u-form-9">
-                <form action=""
-                  class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form"
-                  style="padding: 10px">
-                  <div class="u-form-group u-form-group-21">
-                    <label for="text-bad1" class="u-form-control-hidden u-label u-label-17"></label>
-                    <input type="text" id="ecalculate5" name="text-1"
-                      class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-17" value="0"/>
-                  </div>
-                  <div class="u-form-send-message u-form-send-success">
-                    Thank you! Your message has been sent.
-                  </div>
-                  <div class="u-form-send-error u-form-send-message">
-                    Unable to send your message. Please fix errors then try
-                    again.
-                  </div>
-                  <input type="hidden" value="" name="recaptchaResponse" />
-                  <input type="hidden" name="formServices" value="edac30f68a28e763f6749ad09bc87b38" />
-                </form>
-              </div>
-            </div>
-          </div>
+    <header class="u-clearfix u-grey-75 u-header u-header" id="sec-0210">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <a href="#" class="u-image u-logo u-image-1" data-image-width="2000" data-image-height="1186">
+                <img src="images/logo2.png" class="u-logo-image u-logo-image-1" />
+            </a>
+            <a href="index.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-1" target="_blank">Home</a>
+            <a href="About_Us.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-2" target="_blank">About Us</a>
+            <a href="Calculate.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-3" target="_blank">Calculate</a>
+            <a href="Contact_Us.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-4" target="_blank">Contact Us</a>
+            <a href="index.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-body-alt-color u-btn-5" target="_blank">Chat With Us</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
+    <section class="u-clearfix u-gradient u-section-1" id="sec-ef34">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-container-style u-custom-color-9 u-group u-radius-30 u-shape-round u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h2 class="u-text u-text-default u-text-1">
+                        Know Your Carbon Footprint
+                    </h2>
+                    <div class="u-form u-form-1">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-1">
+                                <label for="text-0b0b" class="u-label u-label-1">Energy Consumption</label>
+                                <input type="number" id="egcon" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-1" placeholder="KWh" required="required" />
+                            </div>
+                            <div class="u-form-group u-form-group-2">
+                                <label for="text-bad1" class="u-label u-label-2">Emission Factor</label>
+                                <input type="text" id="efactor" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-2" placeholder="0.85" />
+                            </div>
+                            <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-3">
+                                <label for="number-9287" class="u-label u-label-3">Number of Appliances</label>
+                                <div class="u-input-row">
+                                    <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap" name="number" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-3" />
+                                </div>
+                            </div>
+                            <div class="u-align-left u-form-group u-form-submit">
+                                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-1">Calculate</a>
+                                <input type="submit" value="submit" class="u-form-control-hidden" onclick="electicity()" />
+                            </div>
+                            <br>
+                        </form>
+                    </div>
+                    <div class="u-form u-form-2">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-5">
+                                <label for="text-bad1" class="u-form-control-hidden u-label u-label-4"></label>
+                                <input type="text" id="ecalculate1" name="text-1" value="0" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-4" />
+                            </div>
+                        </form>
+                    </div>
+                    <p class="u-text u-text-default u-text-2">
+                        Emission Calculated :&nbsp;
+                    </p>
+                    <div class="u-form u-form-3">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-6">
+                                <label for="text-0b0b" class="u-label u-label-5">Fuel Consumption</label>
+                                <input type="number" id="egcon1" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-5" placeholder="Petrol (Litres)" required="required" />
+                            </div>
+                            <div class="u-form-group u-form-group-7">
+                                <label for="text-bad1" class="u-label u-label-6">Emission Factor</label>
+                                <input type="text" id="efactor1" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-6" placeholder="2.296" />
+                            </div>
+                            <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-8">
+                                <label for="number-9287" class="u-label u-label-7">Number of Vehicles</label>
+                                <div class="u-input-row">
+                                    <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap1" name="number" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-7" />
+                                </div>
+                            </div>
+                            <div class="u-align-left u-form-group u-form-submit">
+                                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-2">Calculate</a>
+                                <input type="submit" value="submit" class="u-form-control-hidden" onclick="petrol()" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="u-form u-form-4">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-10">
+                                <label for="text-bad1" class="u-form-control-hidden u-label u-label-8"></label>
+                                <input type="text" id="ecalculate2" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-8" value="0" />
+                            </div>
+                            <div class="u-form-send-message u-form-send-success">
+                                Thank you! Your message has been sent.
+                            </div>
+                            <div class="u-form-send-error u-form-send-message">
+                                Unable to send your message. Please fix errors then try again.
+                            </div>
+                            <input type="hidden" value="" name="recaptchaResponse" />
+                            <input type="hidden" name="formServices" value="edac30f68a28e763f6749ad09bc87b38" />
+                        </form>
+                    </div>
+                    <p class="u-text u-text-default u-text-3">
+                        Emission Calculated :&nbsp;
+                    </p>
+                    <div class="u-form u-form-5">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-11">
+                                <label for="text-0b0b" class="u-label u-label-9">Fuel Consumption</label>
+                                <input type="number" id="egcon2" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-9" placeholder="Diesel (Litres)" required="required" />
+                            </div>
+                            <div class="u-form-group u-form-group-12">
+                                <label for="text-bad1" class="u-label u-label-10">Emission Factor</label>
+                                <input type="text" id="efactor2" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-10" placeholder="2.653" />
+                            </div>
+                            <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-13">
+                                <label for="number-9287" class="u-label u-label-11">Number of Vehicles</label>
+                                <div class="u-input-row">
+                                    <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap2" name="number" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-11" />
+                                </div>
+                            </div>
+                            <div class="u-align-left u-form-group u-form-submit">
+                                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-3">Calculate</a>
+                                <input type="submit" value="submit" class="u-form-control-hidden" onclick="diesel()" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="u-form u-form-6">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-15">
+                                <label for="text-bad1" class="u-form-control-hidden u-label u-label-12"></label>
+                                <input type="text" id="ecalculate3" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-12" value="0" />
+                            </div>
+                        </form>
+                    </div>
+                    <p class="u-text u-text-default u-text-4">
+                        Emission Calculated :&nbsp;
+                    </p>
+                    <div class="u-form u-form-7">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-16">
+                                <label for="text-0b0b" class="u-label u-label-13">Fuel Consumption</label>
+                                <input type="number" id="egcon3" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-13" placeholder="LPG (Kg)" required="required" />
+                            </div>
+                            <div class="u-form-group u-form-group-17">
+                                <label for="text-bad1" class="u-label u-label-14">Emission Factor</label>
+                                <input type="text" id="efactor3" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-14" placeholder="2.983" />
+                            </div>
+                            <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-18">
+                                <label for="number-9287" class="u-label u-label-15">Number of Cylinders</label>
+                                <div class="u-input-row">
+                                    <input value="0" min="1" max="100" step="1" type="number" placeholder="" id="numberap3" name="number" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-15" />
+                                </div>
+                            </div>
+                            <div class="u-align-left u-form-group u-form-submit">
+                                <a href="#" class="u-btn u-btn-submit u-button-style u-custom-color-8 u-btn-4">Calculate</a>
+                                <input type="submit" value="submit" class="u-form-control-hidden" onclick="lpg()" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="u-form u-form-8">
+                        <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                            <div class="u-form-group u-form-group-20">
+                                <label for="text-bad1" class="u-form-control-hidden u-label u-label-16"></label>
+                                <input type="text" id="ecalculate4" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-16" value="0" />
+                            </div>
+                        </form>
+                    </div>
+                    <p class="u-text u-text-default u-text-5">
+                        Emission Calculated :&nbsp;
+                    </p>
+                    <div class="u-container-style u-custom-color-8 u-group u-radius-30 u-shape-round u-group-2">
+                        <div class="u-container-layout u-container-layout-2">
+                            <h2 class="u-text u-text-default u-text-6">
+                                Total Emission (in a year) :&nbsp;
+                            </h2>
+                            <div class="u-form u-form-9">
+                                <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px">
+                                    <div class="u-form-group u-form-group-21">
+                                        <label for="text-bad1" class="u-form-control-hidden u-label u-label-17"></label>
+                                        <input type="text" id="ecalculate5" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-input-17" value="0" />
+                                    </div>
+                                    <div class="u-form-send-message u-form-send-success">
+                                        Thank you! Your message has been sent.
+                                    </div>
+                                    <div class="u-form-send-error u-form-send-message">
+                                        Unable to send your message. Please fix errors then try again.
+                                    </div>
+                                    <input type="hidden" value="" name="recaptchaResponse" />
+                                    <input type="hidden" name="formServices" value="edac30f68a28e763f6749ad09bc87b38" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-cc19">
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <img class="u-image u-image-contain u-image-default u-image-1" src="images/logo2.png" alt=""
-        data-image-width="2000" data-image-height="1186" />
-      <h2 class="u-text u-text-default u-text-1">Useful Links</h2>
-      <h2 class="u-text u-text-default u-text-2">About<br /></h2>
-      <h2 class="u-text u-text-default u-text-3">Contact</h2>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-4">
-        Privacy Policy
-      </p>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-5">
-        RTI Centres
-      </p>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-6">
-        <span class="u-icon u-text-custom-color-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px"
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-cc19">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <img class="u-image u-image-contain u-image-default u-image-1" src="images/logo2.png" alt="" data-image-width="2000" data-image-height="1186" />
+            <h2 class="u-text u-text-default u-text-1">Useful Links</h2>
+            <h2 class="u-text u-text-default u-text-2">About<br /></h2>
+            <h2 class="u-text u-text-default u-text-3">Contact</h2>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-4">
+                Privacy Policy
+            </p>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-5">
+                RTI Centres
+            </p>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-6">
+                <span class="u-icon u-text-custom-color-1"><svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px"
             style="width: 1em; height: 1em">
             <path style="fill: currentColor" d="M38.853,5.324L38.853,5.324c-7.098-7.098-18.607-7.098-25.706,0h0
 	C6.751,11.72,6.031,23.763,11.459,31L26,52l14.541-21C45.969,23.763,45.249,11.72,38.853,5.324z M26.177,24c-3.314,0-6-2.686-6-6
 	s2.686-6,6-6s6,2.686,6,6S29.491,24,26.177,24z"></path>
           </svg><img /></span>&nbsp;Mumbai, India
-      </p>
-      <a href="#"
-        class="u-active-none u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-custom-color-1 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Tenders</a>
-      <a href="#"
-        class="u-active-none u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-custom-color-1 u-top-left-radius-0 u-top-right-radius-0 u-btn-2"><span
-          class="u-icon"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px" y="0px"
+            </p>
+            <a href="#" class="u-active-none u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-custom-color-1 u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Tenders</a>
+            <a href="#" class="u-active-none u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-text-custom-color-1 u-top-left-radius-0 u-top-right-radius-0 u-btn-2"><span class="u-icon"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px" y="0px"
             style="width: 1em; height: 1em">
             <path
               d="M373.333,266.88c-25.003,0-49.493-3.904-72.704-11.563c-11.328-3.904-24.192-0.896-31.637,6.699l-46.016,34.752    c-52.8-28.181-86.592-61.952-114.389-114.368l33.813-44.928c8.512-8.512,11.563-20.971,7.915-32.64    C142.592,81.472,138.667,56.96,138.667,32c0-17.643-14.357-32-32-32H32C14.357,0,0,14.357,0,32    c0,205.845,167.488,373.333,373.333,373.333c17.643,0,32-14.357,32-32V298.88C405.333,281.237,390.976,266.88,373.333,266.88z">
             </path>
           </svg><img /></span>&nbsp;+1 (234) 567-8910
-      </a>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-7">FAQs</p>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-8">
-        Terms &amp; Conditions
-      </p>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-9">
-        Press Releases
-      </p>
-      <p class="u-text u-text-custom-color-1 u-text-default u-text-10">
-        <span class="u-file-icon u-icon u-text-custom-color-1"><img src="images/542689-e6dfa74d.png"
+            </a>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-7">FAQs</p>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-8">
+                Terms &amp; Conditions
+            </p>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-9">
+                Press Releases
+            </p>
+            <p class="u-text u-text-custom-color-1 u-text-default u-text-10">
+                <span class="u-file-icon u-icon u-text-custom-color-1"><img src="images/542689-e6dfa74d.png"
             alt="" /></span>&nbsp;info@site.com
-      </p>
-    </div>
-  </footer>
-  <section class="u-backlink u-clearfix u-grey-80">
-    <a class="u-link" href="#" target="_blank">
-      <span>Website</span>
-    </a>
-    <p class="u-text">
-      <span>created by</span>
-    </p>
-    <a class="u-link" href="" target="_blank">
-      <span>Arnab Mondal</span> </a>.
-  </section>
+            </p>
+        </div>
+    </footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+        <a class="u-link" href="#" target="_blank">
+            <span>Website</span>
+        </a>
+        <p class="u-text">
+            <span>created by</span>
+        </p>
+        <a class="u-link" href="" target="_blank">
+            <span>Arnab Mondal</span> </a>.
+    </section>
 </body>
 
 </html>
