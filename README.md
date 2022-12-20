@@ -5,6 +5,8 @@
 
 ## To run this website click on this link below
 ## https://salmon-mushroom-049645e1e.2.azurestaticapps.net
+## To run this website click on this link below
+## https://salmon-mushroom-049645e1e.2.azurestaticapps.net
 # Green Life
 Green Life Solutions strives to find a balance between nature and humans in order to build a better tomorrow. Our goal is to reduce individuals' carbon footprints in order to achieve sustainable development across all sectors. In order to accomplish this, our website provides a carbon footprint calculator, which calculates the carbon footprint based on energy consumption and emission rate. The result is expressed in kilograms per year. By providing these basic details, the website helps people determine the amount of carbon footprint released which can then be used to adopt sustainable growth strategies. Using our chatbot feature under the 'Char with Us' menu you can get solutions to any questions about using the interface or any queries you may have. We are always available through our contact us section in case anyone has any questions or confusion.
 ## Languages and Services used:
@@ -51,7 +53,6 @@ Green Life Solutions strives to find a balance between nature and humans in orde
 
 ###
 ## You can check the demonstration by clicking the link below
-<br>
 ## [Project video](https://youtu.be/djaVxMZB8g4)
 
 ###
